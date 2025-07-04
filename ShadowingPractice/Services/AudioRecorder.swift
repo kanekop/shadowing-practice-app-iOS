@@ -7,6 +7,7 @@ class AudioRecorder: NSObject, ObservableObject {
     private var recordingSession: AVAudioSession!
     private var timer: Timer?
     private let speechRecognizer = SpeechRecognizer()
+    private var stopRecordingCompletion: ((URL?) -> Void)?
     
     @Published var isRecording = false
     @Published var recordingTime: TimeInterval = 0
@@ -67,9 +68,9 @@ class AudioRecorder: NSObject, ObservableObject {
         }
     }
     
-    func stopRecording() {
+    func stopRecording(completion: @escaping (URL?) -> Void = { _ in }) {
+        stopRecordingCompletion = completion
         audioRecorder?.stop()
-        audioRecorder = nil
         isRecording = false
         
         timer?.invalidate()
@@ -159,6 +160,8 @@ class AudioRecorder: NSObject, ObservableObject {
 
 extension AudioRecorder: AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        let recordingURL = flag ? currentRecordingURL : nil
+        
         if !flag {
             print("Recording failed")
             currentRecordingURL = nil
@@ -169,6 +172,11 @@ extension AudioRecorder: AVAudioRecorderDelegate {
             }
             loadRecordings()
         }
+        
+        // Call completion handler with the recording URL
+        stopRecordingCompletion?(recordingURL)
+        stopRecordingCompletion = nil
+        audioRecorder = nil
     }
     
     func audioRecorderEncodeErrorDidOccur(_ recorder: AVAudioRecorder, error: Error?) {

@@ -14,6 +14,7 @@ struct PracticeView: View {
     @State private var isPlayingSample = false
     @State private var recordingTimer: Timer?
     @State private var elapsedTime: TimeInterval = 0
+    @State private var currentRecordingURL: URL?
     
     private let textComparisonService = TextComparisonService()
     
@@ -217,6 +218,10 @@ struct PracticeView: View {
             showResults = false
             elapsedTime = 0
             
+            // Store the recording URL
+            currentRecordingURL = audioRecorder.currentRecordingURL
+            print("DEBUG: Started recording at path: \(currentRecordingURL?.path ?? "nil")")
+            
             // Start timer
             recordingTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
                 elapsedTime += 0.1
@@ -227,12 +232,12 @@ struct PracticeView: View {
                 playSampleAudio()
             }
         } catch {
-            print("Failed to start recording: \(error)")
+            print("ERROR: Failed to start recording: \(error)")
         }
     }
     
     private func stopRecording() {
-        audioRecorder.stopRecording()
+        print("DEBUG: Stopping recording...")
         isPracticing = false
         recordingTimer?.invalidate()
         recordingTimer = nil
@@ -243,22 +248,67 @@ struct PracticeView: View {
             isPlayingSample = false
         }
         
-        // Analyze the recording
-        if let recordingURL = audioRecorder.currentRecordingURL {
-            analyzeRecording(url: recordingURL)
+        // Use completion handler to ensure recording is fully finished
+        audioRecorder.stopRecording { recordingURL in
+            if let url = recordingURL {
+                print("DEBUG: Recording finished successfully at: \(url.path)")
+                print("DEBUG: Starting speech recognition...")
+                self.analyzeRecording(url: url)
+            } else {
+                print("ERROR: Recording failed or no URL available")
+                DispatchQueue.main.async {
+                    self.practiceResult = PracticeResult(
+                        recognizedText: "録音に失敗しました",
+                        score: 0,
+                        feedback: "もう一度お試しください",
+                        comparisonResult: nil
+                    )
+                    self.showResults = true
+                }
+            }
         }
     }
     
     private func analyzeRecording(url: URL) {
+        print("DEBUG: analyzeRecording called with URL: \(url.path)")
+        
+        // Check if file exists before processing
+        guard FileManager.default.fileExists(atPath: url.path) else {
+            print("ERROR: Recording file does not exist at path: \(url.path)")
+            DispatchQueue.main.async {
+                self.practiceResult = PracticeResult(
+                    recognizedText: "録音ファイルが見つかりません",
+                    score: 0,
+                    feedback: "もう一度お試しください",
+                    comparisonResult: nil
+                )
+                self.showResults = true
+            }
+            return
+        }
+        
+        // Check file size for debugging
+        if let fileAttributes = try? FileManager.default.attributesOfItem(atPath: url.path),
+           let fileSize = fileAttributes[.size] as? Int64 {
+            print("DEBUG: Recording file size: \(fileSize) bytes")
+        }
+        
+        print("DEBUG: Starting speech recognition...")
         speechRecognizer.recognizeFromFile(url: url) { result in
+            print("DEBUG: Speech recognition completed")
             
             switch result {
             case .success(let recognizedText):
+                print("DEBUG: Speech recognition successful")
+                print("DEBUG: Recognized text: \(recognizedText)")
+                
                 let comparisonResult = textComparisonService.compare(
                     original: sampleText,
                     recognized: recognizedText
                 )
                 let feedback = textComparisonService.getDetailedFeedback(for: comparisonResult)
+                
+                print("DEBUG: Comparison result - Accuracy: \(comparisonResult.accuracy)%")
                 
                 // Create and save practice session
                 let practiceSession = PracticeSession.create(
@@ -271,25 +321,28 @@ struct PracticeView: View {
                 savePracticeSession(practiceSession)
                 
                 DispatchQueue.main.async {
-                    practiceResult = PracticeResult(
+                    self.practiceResult = PracticeResult(
                         recognizedText: recognizedText,
                         score: Int(comparisonResult.accuracy),
                         feedback: feedback,
                         comparisonResult: comparisonResult
                     )
-                    showResults = true
+                    self.showResults = true
+                    print("DEBUG: Results displayed to user")
                 }
                 
             case .failure(let error):
-                print("Recognition failed: \(error)")
+                print("ERROR: Speech recognition failed: \(error)")
+                print("ERROR: Error details: \(error.localizedDescription)")
+                
                 DispatchQueue.main.async {
-                    practiceResult = PracticeResult(
+                    self.practiceResult = PracticeResult(
                         recognizedText: "音声認識に失敗しました",
                         score: 0,
                         feedback: "もう一度お試しください",
                         comparisonResult: nil
                     )
-                    showResults = true
+                    self.showResults = true
                 }
             }
         }
@@ -340,9 +393,11 @@ struct PracticeView: View {
     }
     
     private func resetPractice() {
+        print("DEBUG: Resetting practice session")
         showResults = false
         practiceResult = nil
         elapsedTime = 0
+        currentRecordingURL = nil
     }
     
     private func timeString(from timeInterval: TimeInterval) -> String {
