@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		18BCBDAA2E17ADD5008C4A75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18BCBD942E17ADD3008C4A75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18BCBD9B2E17ADD3008C4A75;
+			remoteInfo = ShadowingPractice;
+		};
+		18BCBDB42E17ADD5008C4A75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18BCBD942E17ADD3008C4A75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18BCBD9B2E17ADD3008C4A75;
+			remoteInfo = ShadowingPractice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18BCBD9C2E17ADD3008C4A75 /* ShadowingPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShadowingPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BCBDA92E17ADD5008C4A75 /* ShadowingPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadowingPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BCBDB32E17ADD5008C4A75 /* ShadowingPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadowingPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		18BCBD9E2E17ADD3008C4A75 /* ShadowingPractice */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ShadowingPractice;
+			sourceTree = "<group>";
+		};
+		18BCBDAC2E17ADD5008C4A75 /* ShadowingPracticeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ShadowingPracticeTests;
+			sourceTree = "<group>";
+		};
+		18BCBDB62E17ADD5008C4A75 /* ShadowingPracticeUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ShadowingPracticeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18BCBD992E17ADD3008C4A75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BCBDA62E17ADD5008C4A75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BCBDB02E17ADD5008C4A75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18BCBD932E17ADD3008C4A75 = {
+			isa = PBXGroup;
+			children = (
+				18BCBD9E2E17ADD3008C4A75 /* ShadowingPractice */,
+				18BCBDAC2E17ADD5008C4A75 /* ShadowingPracticeTests */,
+				18BCBDB62E17ADD5008C4A75 /* ShadowingPracticeUITests */,
+				18BCBD9D2E17ADD3008C4A75 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18BCBD9D2E17ADD3008C4A75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18BCBD9C2E17ADD3008C4A75 /* ShadowingPractice.app */,
+				18BCBDA92E17ADD5008C4A75 /* ShadowingPracticeTests.xctest */,
+				18BCBDB32E17ADD5008C4A75 /* ShadowingPracticeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18BCBD9B2E17ADD3008C4A75 /* ShadowingPractice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BCBDBD2E17ADD5008C4A75 /* Build configuration list for PBXNativeTarget "ShadowingPractice" */;
+			buildPhases = (
+				18BCBD982E17ADD3008C4A75 /* Sources */,
+				18BCBD992E17ADD3008C4A75 /* Frameworks */,
+				18BCBD9A2E17ADD3008C4A75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				18BCBD9E2E17ADD3008C4A75 /* ShadowingPractice */,
+			);
+			name = ShadowingPractice;
+			packageProductDependencies = (
+			);
+			productName = ShadowingPractice;
+			productReference = 18BCBD9C2E17ADD3008C4A75 /* ShadowingPractice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18BCBDA82E17ADD5008C4A75 /* ShadowingPracticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BCBDC02E17ADD5008C4A75 /* Build configuration list for PBXNativeTarget "ShadowingPracticeTests" */;
+			buildPhases = (
+				18BCBDA52E17ADD5008C4A75 /* Sources */,
+				18BCBDA62E17ADD5008C4A75 /* Frameworks */,
+				18BCBDA72E17ADD5008C4A75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18BCBDAB2E17ADD5008C4A75 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				18BCBDAC2E17ADD5008C4A75 /* ShadowingPracticeTests */,
+			);
+			name = ShadowingPracticeTests;
+			packageProductDependencies = (
+			);
+			productName = ShadowingPracticeTests;
+			productReference = 18BCBDA92E17ADD5008C4A75 /* ShadowingPracticeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18BCBDB22E17ADD5008C4A75 /* ShadowingPracticeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BCBDC32E17ADD5008C4A75 /* Build configuration list for PBXNativeTarget "ShadowingPracticeUITests" */;
+			buildPhases = (
+				18BCBDAF2E17ADD5008C4A75 /* Sources */,
+				18BCBDB02E17ADD5008C4A75 /* Frameworks */,
+				18BCBDB12E17ADD5008C4A75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18BCBDB52E17ADD5008C4A75 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				18BCBDB62E17ADD5008C4A75 /* ShadowingPracticeUITests */,
+			);
+			name = ShadowingPracticeUITests;
+			packageProductDependencies = (
+			);
+			productName = ShadowingPracticeUITests;
+			productReference = 18BCBDB32E17ADD5008C4A75 /* ShadowingPracticeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18BCBD942E17ADD3008C4A75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					18BCBD9B2E17ADD3008C4A75 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					18BCBDA82E17ADD5008C4A75 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 18BCBD9B2E17ADD3008C4A75;
+					};
+					18BCBDB22E17ADD5008C4A75 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 18BCBD9B2E17ADD3008C4A75;
+					};
+				};
+			};
+			buildConfigurationList = 18BCBD972E17ADD3008C4A75 /* Build configuration list for PBXProject "ShadowingPractice" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18BCBD932E17ADD3008C4A75;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 18BCBD9D2E17ADD3008C4A75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18BCBD9B2E17ADD3008C4A75 /* ShadowingPractice */,
+				18BCBDA82E17ADD5008C4A75 /* ShadowingPracticeTests */,
+				18BCBDB22E17ADD5008C4A75 /* ShadowingPracticeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18BCBD9A2E17ADD3008C4A75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BCBDA72E17ADD5008C4A75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BCBDB12E17ADD5008C4A75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18BCBD982E17ADD3008C4A75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BCBDA52E17ADD5008C4A75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BCBDAF2E17ADD5008C4A75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18BCBDAB2E17ADD5008C4A75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18BCBD9B2E17ADD3008C4A75 /* ShadowingPractice */;
+			targetProxy = 18BCBDAA2E17ADD5008C4A75 /* PBXContainerItemProxy */;
+		};
+		18BCBDB52E17ADD5008C4A75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18BCBD9B2E17ADD3008C4A75 /* ShadowingPractice */;
+			targetProxy = 18BCBDB42E17ADD5008C4A75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		18BCBDBB2E17ADD5008C4A75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = QN8LU4R23K;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18BCBDBC2E17ADD5008C4A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = QN8LU4R23K;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18BCBDBE2E17ADD5008C4A75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QN8LU4R23K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kanekop-ah.ShadowingPractice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18BCBDBF2E17ADD5008C4A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QN8LU4R23K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kanekop-ah.ShadowingPractice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		18BCBDC12E17ADD5008C4A75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QN8LU4R23K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kanekop-ah.ShadowingPracticeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShadowingPractice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShadowingPractice";
+			};
+			name = Debug;
+		};
+		18BCBDC22E17ADD5008C4A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QN8LU4R23K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kanekop-ah.ShadowingPracticeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShadowingPractice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShadowingPractice";
+			};
+			name = Release;
+		};
+		18BCBDC42E17ADD5008C4A75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QN8LU4R23K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kanekop-ah.ShadowingPracticeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShadowingPractice;
+			};
+			name = Debug;
+		};
+		18BCBDC52E17ADD5008C4A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QN8LU4R23K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kanekop-ah.ShadowingPracticeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShadowingPractice;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18BCBD972E17ADD3008C4A75 /* Build configuration list for PBXProject "ShadowingPractice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BCBDBB2E17ADD5008C4A75 /* Debug */,
+				18BCBDBC2E17ADD5008C4A75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18BCBDBD2E17ADD5008C4A75 /* Build configuration list for PBXNativeTarget "ShadowingPractice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BCBDBE2E17ADD5008C4A75 /* Debug */,
+				18BCBDBF2E17ADD5008C4A75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18BCBDC02E17ADD5008C4A75 /* Build configuration list for PBXNativeTarget "ShadowingPracticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BCBDC12E17ADD5008C4A75 /* Debug */,
+				18BCBDC22E17ADD5008C4A75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18BCBDC32E17ADD5008C4A75 /* Build configuration list for PBXNativeTarget "ShadowingPracticeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BCBDC42E17ADD5008C4A75 /* Debug */,
+				18BCBDC52E17ADD5008C4A75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18BCBD942E17ADD3008C4A75 /* Project object */;
+}
