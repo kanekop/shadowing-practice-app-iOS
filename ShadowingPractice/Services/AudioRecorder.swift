@@ -8,6 +8,7 @@ class AudioRecorder: NSObject, ObservableObject {
     private var timer: Timer?
     private let speechRecognizer = SpeechRecognizer()
     private var stopRecordingCompletion: ((URL?) -> Void)?
+    var shouldAutoTranscribe = true  // Flag to control automatic transcription
     
     @Published var isRecording = false
     @Published var recordingTime: TimeInterval = 0
@@ -166,8 +167,10 @@ extension AudioRecorder: AVAudioRecorderDelegate {
             print("Recording failed")
             currentRecordingURL = nil
         } else {
-            // Start transcription after successful recording
-            if let url = currentRecordingURL {
+            print("DEBUG: Recording finished successfully. Auto-transcribe: \(shouldAutoTranscribe)")
+            // Only start transcription if auto-transcribe is enabled
+            if shouldAutoTranscribe, let url = currentRecordingURL {
+                print("DEBUG: Starting automatic transcription")
                 transcribeRecording(at: url)
             }
             loadRecordings()

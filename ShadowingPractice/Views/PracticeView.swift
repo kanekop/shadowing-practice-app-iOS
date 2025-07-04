@@ -198,8 +198,15 @@ struct PracticeView: View {
         }
         .navigationTitle("シャドウィング練習")
         .navigationBarTitleDisplayMode(.large)
+        .onAppear {
+            // Disable automatic transcription in practice mode
+            audioRecorder.shouldAutoTranscribe = false
+            print("DEBUG: Disabled automatic transcription for practice mode")
+        }
         .onDisappear {
             stopAllAudio()
+            // Re-enable automatic transcription when leaving
+            audioRecorder.shouldAutoTranscribe = true
         }
     }
     
